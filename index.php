@@ -6,17 +6,28 @@ class StrUtils{
 
 
 	    public function __construct($str){
-	   	$this->str= '<strong>'.$str.'</strong>';
+	   	$this->str=$str;
 	   }
 
 	   public function Bold($str){
-	   	return $this->str;
+	   	return '<strong>'.$this->str.'</strong>';
 	   }
+
+	    public function Italic($str){
+	   	return '<i>'.$this->str.'</i>';
+	   }
+
+	   
+
 
 }
 
-  	$StrUtils = new StrUtils('PHP IS AWESOME !');
+  	$StrUtils = new StrUtils('PHP IS AWESOME IN BOLD!</br>');
      print_r($StrUtils->Bold($str));  
+
+
+  	$StrUtils = new StrUtils('PHP IS AWESOME IN ITALIC!</br>');
+     print_r($StrUtils->Italic($str));  
 
 
 
