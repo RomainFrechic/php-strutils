@@ -2,11 +2,15 @@
 
 class StrUtils{
 
-	private $str ='PHP LA PROGRAMATION OBJET !';
+	private $str ="";
 
 
-	public function __construct($str){
-		$this->str=$str;
+	function __construct($newString){
+		$this->str=$newString;
+	}
+
+	public function toString(){
+		return $this->str;
 	}
 
 	public function Bold(){
@@ -25,8 +29,8 @@ class StrUtils{
 	}
 
 	public function Capitalize(){
-		$this->str = strtoupper($this->str);
-		return '<h3>CAPITALIZE :</h3>'.$this->str;
+		$capitalize = strtoupper($this->str);
+		return '<h3>CAPITALIZE :</h3>'.$capitalize;
 	}
 
 	public function Uglify(){
@@ -40,26 +44,27 @@ class StrUtils{
 
 }
 
+$StrUtils = new StrUtils("Simplon.co");//instanciation est appel du constructeur.
+echo $StrUtils->Bold();
+echo $StrUtils->Italic();
+echo $StrUtils->Capitalize();
+echo $StrUtils->Underline();
+echo $StrUtils->Uglify();
+
 $StrUtils = new StrUtils('PHP IS AWESOME IN BOLD!</br>');
-print_r($StrUtils->Bold());  
+echo $StrUtils->Bold();  
 
 
 $StrUtils = new StrUtils('PHP IS AWESOME IN ITALIC!</br>');
-print_r($StrUtils->Italic());
+echo $StrUtils->Italic();
 
 $StrUtils = new StrUtils('PHP IS AWESOME IN UNDERLINE!</br>');
-print_r($StrUtils->Underline());
+echo $StrUtils->Underline();
 
 $StrUtils = new StrUtils('php is awesome in Capitalize!</br>');
-print_r($StrUtils->Capitalize());
+echo $StrUtils->Capitalize();
 
 $StrUtils = new StrUtils('php is awesome in uglify!</br>');
-print_r($StrUtils->Uglify());             
-
-
-
-
-
-
+echo $StrUtils->Uglify();             
 
 ?>
