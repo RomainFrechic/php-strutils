@@ -53,7 +53,7 @@ print_r($StrUtils->Underline());
 $StrUtils = new StrUtils('php is awesome in Capitalize!</br>');
 print_r($StrUtils->Capitalize());
 
-$StrUtils = new StrUtils('php is awesome in Capitalize!</br>');
+$StrUtils = new StrUtils('php is awesome in uglify!</br>');
 print_r($StrUtils->Uglify());             
 
 
