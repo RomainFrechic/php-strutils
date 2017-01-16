@@ -17,7 +17,9 @@ class StrUtils{
 	   	return '<i>'.$this->str.'</i>';
 	   }
 
-	   
+	    public function Underline($str){
+	   	return '<u>'.$this->str.'</u>';
+	   }
 
 
 }
@@ -27,7 +29,10 @@ class StrUtils{
 
 
   	$StrUtils = new StrUtils('PHP IS AWESOME IN ITALIC!</br>');
-     print_r($StrUtils->Italic($str));  
+     print_r($StrUtils->Italic($str));
+
+     $StrUtils = new StrUtils('PHP IS AWESOME IN UNDERLINE!</br>');
+     print_r($StrUtils->Underline($str));    
 
 
 
