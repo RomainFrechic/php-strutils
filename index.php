@@ -20,6 +20,10 @@ class StrUtils{
 	    public function Underline($str){
 	   	return '<u>'.$this->str.'</u>';
 	   }
+	   public function Capitalize($str){
+	   	return strtoupper($this->str);
+	   }
+
 
 
 }
@@ -32,7 +36,10 @@ class StrUtils{
      print_r($StrUtils->Italic($str));
 
      $StrUtils = new StrUtils('PHP IS AWESOME IN UNDERLINE!</br>');
-     print_r($StrUtils->Underline($str));    
+     print_r($StrUtils->Underline($str));
+
+      $StrUtils = new StrUtils('php is awesome in Capitalize!</br>');
+     print_r($StrUtils->Capitalize($str));        
 
 
 
